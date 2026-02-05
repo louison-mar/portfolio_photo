@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles_nature.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="carsrcipt.js" defer></script>
+    <!-- jQuery (Nécessaire pour Slick) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+    <!-- Slick Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Votre script personnalisé pour initialiser Slick -->
+    <script src="carsrcipt.js" defer></script>
+
+</head>
+<div class="navbar">
+    <!-- Section des réseaux sociaux à gauche -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/louison.martin.182" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/m_louison/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Logo centré -->
+    <div class="logo">
+        <a href="index.html"><img src="photos/logo2.png" alt="Logo">
+        </a>
+    </div>
+
+</div>
+
+<header class="hero">
+    <h1 class="hero-title"> Beautiful Nature + Stunning Landscape</h1>
+    <div class="hero-content">
+        <a href="gallery.html" class="hero-btn">Go to Gallery</a>
+    </div>
+</header>
+
+
+<body>
+<div class = 'gallery-background'>
+
+
+<main class="gallery-container">
+    <!-- Add your photo items here -->
+    <div class="photo-row two">
+        <div class="photo-item"><img src="photos/nature/hugo_fort-4.jpg" alt="Photo 1" data-info = "Lyon"></div>
+        <div class="photo-item"><img src="photos/nature/eau3-1.jpg" alt="Photo 2" data-info = "Lyon"></div>
+    </div>
+    <div class="photo-row three large-small-small">
+        <div class="photo-item"><img src="photos/nature/serpent-1.jpg" alt="Photo 1" data-info = "La Ciotat"></div>
+        <div class="photo-item"><img src="photos/nature/teteor_LMartin-03.jpg" alt="Photo 2" data-info = "La Ciotat"></div>
+        <div class="photo-item"><img src="photos/nature/site_LMartin-25.jpg" alt="Photo 3" data-info = "Mount St Victoire"></div>
+    </div>
+    <div class="photo-row two">
+        <div class="photo-item"><img src="photos/nature/site_LMartin-54.jpg" alt="Photo 3" data-info = "Romayer pass"></div>
+        <div class="photo-item"><img src="photos/nature/site_LMartin-03.jpg" alt="Photo 2" data-info = "Lyon"></div>
+    </div>
+    <div class="photo-row three large-small-small">
+        <div class="photo-item"><img src="photos/nature/site_LMartin-04.jpg" alt="Photo 1" data-info = "Parc de la tete d'or"></div>
+        <div class="photo-item"><img src="photos/nature/site_LMartin-26.jpg" alt="Photo 1" data-info = "Grenoble"></div>
+        <div class="photo-item"><img src="photos/nature/site_LMartin-01.jpg" alt="Photo 2" data-info = "Aix en provence"></div>
+    </div>
+    <div class="photo-row two">
+        <div class="photo-item"><img src="photos/nature/astrotest-1.jpg" alt="Photo 2" data-info = "Aix en provence"></div>
+        <div class="photo-item"><img src="photos/nature/site_LMartin-31.jpg" alt="Photo 3" data-info = "Romayer pass"></div>
+    </div>
+    <!-- Modal pour agrandir les images -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+</main>
+</div>
+</body>
+<footer class="footer">
+    <p>website built by myself enjoy!</p>
+</footer>
+</html>

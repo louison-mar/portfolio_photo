@@ -1,0 +1,642 @@
+/* Media Query pour les écrans de largeur inférieure ou égale à 901px (tablettes et mobiles) */
+@media screen and (max-width: 1500px) {
+    /* Navbar */
+    .navbar .logo img {
+        width: 200px !important;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .navbar {
+        max-height: 5vh;
+    }
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Applique à tous les éléments de la page */
+
+
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+/* Masquer la barre de défilement uniquement sur Webkit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    display: none; /* Cache la barre de défilement */
+}
+body, section, header, footer, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+/* Polices améliorées */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgba(50, 49, 49, 0.42);
+}
+
+h1, h2, h3, h4, button {
+    font-family: 'Poppins', serif;
+}
+
+.navbar ul li a {
+    font-family: 'Poppins', sans-serif;
+}
+.hero-title {
+    font-family: 'Poppins', serif;
+}
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Pour les boutons */
+.hero-btn {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar a {
+    font-size: 1.1rem;
+}
+
+.button {
+    font-size: 1rem;
+    background: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    box-shadow: none;
+}
+
+.hero {
+    position: relative;
+    background: url(photos/buildings/site_LMartin-11.jpg) no-repeat center center/cover;
+    margin-top: 0px; /* Ajustez cette valeur à la hauteur réelle de la navbar */
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;  /* Centrer horizontalement */
+    align-items: center;      /* Centrer verticalement */
+    flex-direction: column;   /* Disposition verticale pour le logo et le bouton */
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.73);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* Suppression de l'animation du logo */
+.hero img {
+    position: absolute;
+    top: 5%; /* Centrer verticalement */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrer à la fois horizontalement et verticalement */
+    z-index: 2;
+    opacity: 1;  /* Assurer que l'image est visible dès le début */
+}
+
+/* Suppression de l'animation du bouton */
+.hero-btn {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%); /* Centrer horizontalement */
+    z-index: 2;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.8s;
+    opacity: 1; /* Assurer que le bouton est visible dès le début */
+}
+
+.hero-btn:hover {
+    background-color: rgba(255, 255, 255, 0.65);
+    color: #333;
+}
+
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: 0 2px 7px rgba(32, 32, 32, 0);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease-in-out; /* Animation fluide pour le changement de couleur */
+}
+.navbar.scrolled {
+    background-color: #252525; /* Fond noir, ou une couleur de votre choix */
+    color: #fff; /* Couleur du texte si nécessaire */
+}
+
+/* Logo centré */
+.navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.navbar .logo img {
+    width: 350px; /* Agrandir le logo */
+    height: auto;
+}
+
+/* Réseaux sociaux alignés à gauche */
+.navbar .social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar .social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.navbar .social-icons a:hover {
+    color: #007bff;
+}
+
+/* Sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -250px; /* Par défaut, cachée à droite */
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: right 0.5s ease; /* Animation fluide */
+}
+
+/* Sidenav menu links */
+.sidenav a {
+    text-align: right;
+    padding: 8px 25px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.84);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #2349a1;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+    right: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    height: 3px;
+    background-color: white; /* Couleur des lignes */
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+
+/* Sections */
+section {
+    padding: 0rem;
+    margin: 0rem;
+    text-align: center;
+}
+
+.about, .services {
+    color: #202020;
+    background-color: #fff;
+
+}
+
+
+/* Gallery Section with background image */
+.gallery {
+    background: linear-gradient(rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.18)),
+    url(photos/artistic/lectures%20interdites_LMartin-04.jpg) no-repeat center center/cover;
+    background-size: cover;
+    padding: 3rem;
+    color: white;  /* Default text color */
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gallery .filter {
+    margin-bottom: 2rem;
+}
+
+.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+/* Button styles in the gallery section */
+.filter-btn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 1px solid rgba(241, 241, 241, 0.91);
+    background: none;
+    color: rgba(241, 241, 241, 0.91);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: rgba(241, 241, 241, 0.91);
+    color: white;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: rgba(241, 241, 241, 0.91);  /* Changez ici la couleur du texte */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0rem;
+}
+
+/* About Section with background image */
+.about {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(photos/buildings/site_LMartin-20.jpg) no-repeat center center/cover;
+    background-size: cover;
+    color: rgba(241, 241, 241, 0.91);  /* Texte en blanc par défaut */
+    padding: 3rem;
+    text-align: center;
+    position: relative; /* Ajouter cette ligne pour pouvoir utiliser z-index */
+    z-index: 1;
+}
+
+
+.about .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.about h2, .about-text {
+    position: relative; /* Assurez-vous que le texte est au-dessus de l'overlay */
+    z-index: 3;
+}
+
+/* Adjust text color based on background */
+.about-content {
+    display: flex;
+    flex-direction: row; /* Place texte et image en colonne */
+    justify-content: center;
+    align-items: center;
+    gap: 6rem; /* Espace réglable entre texte et photo */
+    margin: 0 auto; /* Centre le contenu horizontalement */
+    text-align: center; /* Centre le texte */
+    flex-wrap: wrap; /* Permet un retour à la ligne si nécessaire sur petit écran */
+    max-width: 1200px; /* Largeur maximale pour éviter un conteneur trop large */
+}
+
+.about-image img {
+    max-width: 100%; /* Empêche l'image de dépasser la taille du conteneur parent */
+    height: auto; /* Garde les proportions */
+    border-radius: 10px; /* Ajoute des coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre */
+}
+.about-text {
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 2rem;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(47, 47, 51, 0.37), rgba(37, 37, 39, 0.88));
+    border-radius: 10px;
+    text-align: center;
+    z-index: 3;
+}
+
+.about-image {
+    max-width: 500px;
+    width: 100%; /* Garde l'image responsive */
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.about-image:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; /* Empile le texte et l'image */
+        text-align: center; /* Centre le texte */
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Espace entre l'image et le texte */
+    }
+}
+
+.about .btn {
+    display: inline-block;
+    background-color: rgba(214, 214, 214, 0.11); /* Couleur principale */
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about .btn:hover {
+    background-color: rgba(218, 218, 218, 0.82); /* Couleur au survol */
+    transform: translateY(-2px); /* Léger effet de levée */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about .btn:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.68); /* Indication de focus */
+    outline-offset: 4px;
+}
+
+
+.slick-carousel {
+    width: 100%;
+    max-width: 100%;
+    max-height: 85vh; /* Vous pouvez ajuster la hauteur ici si nécessaire */
+    padding: 5vh 0;
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    overflow: visible; /* Autoriser le débordement des images */
+    position: relative;
+}
+
+.slick-carousel div {
+    width: auto; /* Laisser les éléments avec une largeur automatique */
+}
+
+.slick-carousel .slick-track {
+    display: flex;
+    justify-content: center; /* Centrer les éléments dans le carrousel */
+    align-items: center; /* Centrer verticalement le contenu */
+    position: relative;
+}
+
+.slick-carousel .slick-slide {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 100%; /* Prendre toute la hauteur du conteneur */
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slick-carousel img {
+    max-width: 90%; /* Réduit la largeur des images pour laisser de l'espace */
+    width: 75vh;
+    height: 30vh;
+    object-fit: cover; /* Garantir que l'image garde ses proportions */
+    margin: 0 auto; /* Centrer l'image horizontalement */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Agrandissement des images au survol */
+.slick-carousel img:hover {
+    transform: scale(1.1);
+}
+
+/* Débordement visible des images à gauche et à droite */
+.slick-carousel .slick-prev {
+    position: absolute;
+    left: -50px;
+}
+
+.slick-carousel .slick-next {
+    position: absolute;
+    right: -50px;
+}
+
+.slick-prev, .slick-next {
+    background: rgba(0, 0, 0, 0.5); /* Boutons de navigation avec fond */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    color: white;
+}
+.gallery .btn {
+    display: inline-block;
+    background-color: rgba(214, 214, 214, 0.11); /* Couleur principale */
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery .btn:hover {
+    background-color: rgba(218, 218, 218, 0.82); /* Couleur au survol */
+    transform: translateY(-2px); /* Léger effet de levée */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gallery .btn:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.68); /* Indication de focus */
+    outline-offset: 4px;
+}
+
+.caroussel_btn{
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.8s;
+}
+
+
+
+/* Services Section */
+.services {
+    background: linear-gradient(180deg,rgb(10, 10, 13) ,rgb(51, 51, 51) );
+    color: #ffffff;
+    padding: 3rem;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.services p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.91);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.44);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: rgba(32, 32, 32, 0.94);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.scroll-indicator {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 1.5s infinite;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.scroll-indicator i {
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}

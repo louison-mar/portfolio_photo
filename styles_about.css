@@ -1,0 +1,706 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+}
+/* Masquer la barre de défilement uniquement sur Webkit (Chrome, Safari) */
+body::-webkit-scrollbar {
+    display: none; /* Cache la barre de défilement */
+}
+body, section, header, footer, div {
+    margin: 0;
+    padding: 0;
+}
+/* Body */
+/* Appliquer les polices globalement */
+body {
+    font-family: 'Poppins', sans-serif; /* Police principale */
+    line-height: 1.6; /* Améliorer la lisibilité */
+    color: rgba(241, 241, 241, 0.91);
+    background-color: rgba(136, 136, 136, 0.82);
+    margin: 0;
+    padding: 0;
+}
+
+/* Optionnel : Styles pour les titres */
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif; /* Police pour les titres */
+    font-weight: 600; /* Mettre en valeur les titres */
+    margin-bottom: 0.5em;
+    font-size: 2.5rem
+}
+
+p {
+    font-size: 1rem;
+}
+
+.navbar a {
+    font-size: 1.1rem;
+}
+
+/* Media Query pour les écrans de largeur inférieure ou égale à 901px (tablettes et mobiles) */
+@media screen and (max-width: 1500px) {
+    /* Navbar */
+    .navbar .logo img {
+        width: 150px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .navbar {
+        max-height: 5vh;
+    };
+
+    /* About Section */
+    .about-section {
+        margin-top: 7vh;
+        min-height: 100vh; /* Prend toute la hauteur de l'écran */
+        padding: 2rem; /* Ajoute de l'espace intérieur pour éviter que le texte touche les bords */
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* Centre verticalement le contenu */
+        align-items: center;
+    }
+
+    .about-text {
+        font-size: 3rem; /* Ajuste la taille du texte si besoin */
+        line-height: 1.6; /* Améliore la lisibilité */
+        max-width: 90vw;
+    }
+
+    .about-image {
+        display: none;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Section Instagram */
+    .instagram {
+        display: flex;
+        justify-content: center; /* Centrer horizontalement */
+        align-items: center; /* Centrer verticalement */
+        height: 60vh; /* Prend toute la hauteur de la fenêtre */
+        position: relative; /* Nécessaire pour le positionnement absolu de .instagram-text et .instagram-btn */
+    }
+
+    /* Contenu de la section Instagram */
+    .instagram-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrer les éléments horizontalement */
+        text-align: center; /* Centrer le texte */
+    }
+
+    /* Texte Instagram */
+    .instagram-text {
+        text-align: center; /* Centrer le texte */
+        width: 100%; /* S'assurer que le texte prenne toute la largeur */
+    }
+
+    /* Bouton Instagram */
+    .instagram-btn {
+        margin-top: 1rem; /* Ajouter un espacement entre le texte et le bouton */
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    /* Image Instagram */
+    .insta-image img {
+        display: none;
+    }
+
+
+    /* Equipment Section */
+    .equipment {
+        padding: 1rem;
+    }
+
+    .equipment-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .equipment-image {
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        margin-bottom: 1rem;
+    }
+
+    .equipment-text {
+        padding: 0 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Media Query pour les très petits écrans (≤ 480px) */
+@media screen and (max-width: 480px) {
+    .logo img{
+        max-width: 28vh;
+    }
+    h1, h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+    #about_me{
+        padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+    }
+    #about_me h3 {
+        margin-top: 2rem;
+        line-height: 2;
+    }
+
+    .burger-icon {
+        width: 20px;
+        height: 15px;
+    }
+
+    .navbar .social-icons a {
+        font-size: 1rem;
+    }
+    /* Section Instagram */
+    .instagram {
+        display: flex;
+        justify-content: center; /* Centrer horizontalement */
+        align-items: center; /* Centrer verticalement */
+        height: 100vh; /* Prend toute la hauteur de la fenêtre */
+        position: relative; /* Nécessaire pour le positionnement absolu de .instagram-text et .instagram-btn */
+        padding: 5px;
+    }
+
+    /* Texte Instagram */
+    .instagram-text {
+        text-align: center; /* Centrer le texte */
+        width: 100%; /* S'assurer que le texte prenne toute la largeur */
+    }
+
+    /* Bouton Instagram */
+    .instagram-btn {
+        margin-top: 14rem; /* Ajouter un espacement entre le texte et le bouton */
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #about_me h3 {
+        margin-top: 2rem;
+        margin-bottom: 0.5rem !important; /* Réduit l'espace sous le titre */
+        line-height: 2;
+    }
+    .about-content {
+        margin-top: 0.1rem !important; /* Ajuste l'espacement au-dessus du contenu */
+    }
+}
+/* Header (Hero Section) */
+.hero {
+    position: relative;
+    background: url(photos/buildings/site_LMartin-17.jpg) no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 3rem;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.18);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    z-index: 2;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgb(28, 28, 28);
+    box-shadow: 0 2px 7px rgba(32, 32, 32, 0);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: background-color 0.3s ease-in-out; /* Animation fluide pour le changement de couleur */
+}
+
+/* Logo centré */
+.navbar .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.navbar .logo img {
+    width: 350px; /* Agrandir le logo */
+    height: auto;
+}
+
+/* Réseaux sociaux alignés à gauche */
+.navbar .social-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navbar .social-icons a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.navbar .social-icons a:hover {
+    color: #007bff;
+}
+
+/* Sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -250px; /* Par défaut, cachée à droite */
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: right 0.5s ease; /* Animation fluide */
+}
+
+/* Sidenav menu links */
+.sidenav a {
+    text-align: right;
+    padding: 8px 25px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.84);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #111;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+    right: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    display: block;
+    height: 3px;
+    background-color: white; /* Couleur des lignes */
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Sections */
+section {
+    padding: 0rem;
+    margin: 0rem;
+    text-align: center;
+}
+
+.about, .services {
+    color: #202020;
+    background-color: #fff;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    background-color: #f1f1f1;
+    background-image: url("photos/nature/pigeon.jpg");
+}
+
+/* Gallery Section with background image */
+.gallery {
+    background: url(photos/nature/pigeon.jpg) no-repeat center center/cover;
+    background-size: cover;
+    padding: 3rem;
+    color: white;  /* Default text color */
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.gallery .filter {
+    margin-bottom: 2rem;
+}
+
+.gallery .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+/* Button styles in the gallery section */
+.filter-btn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: 1px solid rgba(241, 241, 241, 0.91);
+    background: none;
+    color: rgba(241, 241, 241, 0.91);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: rgba(241, 241, 241, 0.91);
+    color: white;
+}
+
+
+/* Footer */
+.footer {
+    background-color: rgb(30, 31, 34);
+    color: rgba(241, 241, 241, 0.91);  /* Changez ici la couleur du texte */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0rem;
+}
+/* About Section with background image */
+.about_me {
+    margin-top: 15px;
+    height: 100vh;
+    background: url(photos/buildings/site_LMartin-17.jpg) no-repeat center center/cover;
+    background-size: cover;
+    color: rgba(241, 241, 241, 0.91);  /* Texte en blanc par défaut */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    padding: 3rem;
+    text-align: center;
+    position: relative; /* Ajouter cette ligne pour pouvoir utiliser z-index */
+    z-index: 1;
+}
+
+
+.about_me .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Renforcer le contraste pour améliorer la visibilité */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.about_me h2, .about-text {
+    position: relative; /* Assurez-vous que le texte est au-dessus de l'overlay */
+    z-index: 3;
+}
+
+/* Adjust text color based on background */
+.about-text {
+    max-width: 600px;
+    line-height: 1.8;
+    padding: 2rem;
+    color: #fff;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.18));
+    border-radius: 10px;
+    text-align: center;
+    z-index: 3;
+}
+
+.about-content {
+    display: flex;
+    max-height: 40vh;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 20vh;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    max-width: 60vh;
+    max-height: 45vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.32);
+}
+
+.about-image:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+/* Instagram Section */
+.instagram {
+    background: url(photos/buildings/site_LMartin-22.jpg) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-color: rgba(241, 241, 241, 0.91);
+    color: #202020;
+}
+
+.instagram-content {
+    display: flex;
+    align-items: center; /* Aligne verticalement les enfants */
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh; /* Ajuste la hauteur si nécessaire */
+    padding: 20px; /* Espace autour */
+    box-sizing: border-box; /* Inclut le padding dans la largeur/hauteur */
+}
+
+.instagram-text {
+    flex: 1; /* Occupe l'espace disponible à gauche */
+    display: flex;
+    flex-direction: column; /* Aligne les enfants verticalement */
+    align-items: flex-start; /* Aligne les éléments sur la gauche */
+    justify-content: center; /* Centre verticalement l'ensemble */
+    gap: 1rem; /* Espace entre chaque élément */
+    color: #f1e9e9;
+}
+
+
+.instagram-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #f1e9e9;
+}
+.instagram-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #f1e9e9;
+}
+
+.instagram-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.11);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.instagram-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.insta-image{
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: flex-end; /* Positionne à droite */
+}
+
+.insta-image img {
+    max-height: 90vh; /* Ajuste la hauteur maximale */
+    width: auto; /* Maintient le ratio d'aspect */
+    object-fit: cover; /* Optionnel pour découper l'image si nécessaire */
+    border-radius: 10px; /* Ajoute des bords arrondis si voulu */
+
+}
+.insta-image:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+
+/* Equipment Section */
+.equipment {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+    background: linear-gradient(to bottom, rgb(63, 63, 63), rgb(28, 29, 30)); /* Dégradé de noir à transparent */
+    flex-wrap: nowrap; /* Empêche les éléments de se déplacer sur une nouvelle ligne */
+    align-items: center; /* Centrer les éléments sur l'axe vertical */
+    text-align: center;
+}
+
+.equipment h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem; /* Espace entre le titre et les éléments */
+    margin-top: 0; /* S'assurer que le titre est bien en haut */
+    color: #f1e9e9;
+    text-align: center;
+    writing-mode: vertical-rl;  /* Afficher le texte en vertical */
+    transform: rotate(180deg); /* Tourner le texte de 180° pour avoir une orientation normale */
+}
+
+.equipment-item {
+    width: 32%;  /* Chaque item occupe environ 1/3 de la largeur */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0), 0 0 40px rgba(255, 255, 255, 0.08); /* Ombre diffuse */
+}
+
+.equipment-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.equipment-item:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.drone {
+    background-image: url('photos/drone.jpg');  /* Remplacer par l'image du drone */
+}
+
+.canon {
+    background-image: url('photos/canon.jpg');  /* Remplacer par l'image du Canon EOS */
+}
+
+.sony {
+    background-image: url('photos/sony.jpg');  /* Remplacer par l'image du Sony A7 III */
+}
+
+.equipment-text {
+    padding: 1rem;
+    text-align: center;
+}
+
+.equipment-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.equipment-text p {
+    font-size: 1rem;
+    color: #f1e9e9;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .equipment {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .equipment-item {
+        width: 80%;  /* Rendre les sections plus larges sur des écrans petits */
+        margin-bottom: 2rem;
+    }
+}
+
