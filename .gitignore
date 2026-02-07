@@ -1,0 +1,15 @@
+# Fichiers inutiles
+.DS_Store
+Thumbs.db
+*.log
+
+# Dossiers temporaires / builds
+node_modules/
+dist/
+build/
+.cache/
+
+# Fichiers trop lourds (optionnel : si tes originaux RAW sont là)
+# originals/
+# *.psd
+# *.raw
