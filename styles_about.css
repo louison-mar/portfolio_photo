@@ -228,7 +228,7 @@ p {
 /* Header (Hero Section) */
 .hero {
     position: relative;
-    background: url(photos/buildings/site_LMartin-17.jpg) no-repeat center center/cover;
+    background: url(photos/buildings/site_LMartin-17.webp) no-repeat center center/cover;
     height: 100vh;
     color: white;
     text-align: center;
@@ -398,12 +398,12 @@ section {
 
 .gallery {
     background-color: #f1f1f1;
-    background-image: url("photos/nature/pigeon.jpg");
+    background-image: url("photos/nature/pigeon.webp");
 }
 
 /* Gallery Section with background image */
 .gallery {
-    background: url(photos/nature/pigeon.jpg) no-repeat center center/cover;
+    background: url(photos/nature/pigeon.webp) no-repeat center center/cover;
     background-size: cover;
     padding: 3rem;
     color: white;  /* Default text color */
@@ -479,7 +479,7 @@ section {
 .about_me {
     margin-top: 15px;
     height: 100vh;
-    background: url(photos/buildings/site_LMartin-17.jpg) no-repeat center center/cover;
+    background: url(photos/buildings/site_LMartin-17.webp) no-repeat center center/cover;
     background-size: cover;
     color: rgba(241, 241, 241, 0.91);  /* Texte en blanc par défaut */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
@@ -541,7 +541,7 @@ section {
 
 /* Instagram Section */
 .instagram {
-    background: url(photos/buildings/site_LMartin-22.jpg) no-repeat center center/cover;
+    background: url(photos/buildings/site_LMartin-22.webp) no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -662,15 +662,15 @@ section {
 }
 
 .drone {
-    background-image: url('photos/drone.jpg');  /* Remplacer par l'image du drone */
+    background-image: url('photos/drone.webp');  /* Remplacer par l'image du drone */
 }
 
 .canon {
-    background-image: url('photos/canon.jpg');  /* Remplacer par l'image du Canon EOS */
+    background-image: url('photos/canon.webp');  /* Remplacer par l'image du Canon EOS */
 }
 
 .sony {
-    background-image: url('photos/sony.jpg');  /* Remplacer par l'image du Sony A7 III */
+    background-image: url('photos/sony.webp');  /* Remplacer par l'image du Sony A7 III */
 }
 
 .equipment-text {

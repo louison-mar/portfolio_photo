@@ -311,7 +311,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(photos/studioterasse_LMartin-06.jpg) no-repeat center center/cover;
+    background: url(photos/studioterasse_LMartin-06.webp) no-repeat center center/cover;
     background-size: cover;
     color: rgba(241, 241, 241, 0.91);  /* Texte en blanc par défaut */
     padding: 3rem;

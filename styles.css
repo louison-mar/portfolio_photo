@@ -83,7 +83,7 @@ h1, h2, h3, h4, button {
 
 .hero {
     position: relative;
-    background: url(photos/buildings/site_LMartin-11.jpg) no-repeat center center/cover;
+    background: url(photos/buildings/site_LMartin-11.webp) no-repeat center center/cover;
     margin-top: 0px; /* Ajustez cette valeur à la hauteur réelle de la navbar */
     height: 100vh;
     color: white;
@@ -269,7 +269,7 @@ section {
 /* Gallery Section with background image */
 .gallery {
     background: linear-gradient(rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.18)),
-    url(photos/artistic/lectures%20interdites_LMartin-04.jpg) no-repeat center center/cover;
+    url(photos/artistic/lectures%20interdites_LMartin-04.webp) no-repeat center center/cover;
     background-size: cover;
     padding: 3rem;
     color: white;  /* Default text color */
@@ -348,7 +348,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(photos/buildings/site_LMartin-20.jpg) no-repeat center center/cover;
+    background: url(photos/buildings/site_LMartin-20.webp) no-repeat center center/cover;
     background-size: cover;
     color: rgba(241, 241, 241, 0.91);  /* Texte en blanc par défaut */
     padding: 3rem;
